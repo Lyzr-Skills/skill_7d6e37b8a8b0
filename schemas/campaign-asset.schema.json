@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CampaignAsset",
+  "type": "object",
+  "required": ["purpose", "audience", "message", "CTA", "format", "owner", "status"],
+  "properties": {
+    "asset_id": { "type": "string" },
+    "purpose": { "type": "string" },
+    "audience": { "type": "string" },
+    "message": { "type": "string" },
+    "CTA": { "type": "string" },
+    "format": { "type": "string" },
+    "owner": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["REQUIRED", "OPTIONAL", "IN_PROGRESS", "APPROVED", "MISSING"]
+    },
+    "dependency": { "type": ["string", "null"] }
+  }
+}
